@@ -1,5 +1,5 @@
 <?php
-  function refrescar(){
+  
 $doc = fopen("Coordenadas.txt","r") or die ("Error al leer el archivo");
   while(!feof($doc)){
     $texto = fgets($doc);
@@ -14,7 +14,7 @@ $doc = fopen("Coordenadas.txt","r") or die ("Error al leer el archivo");
   $url=$_SERVER['REQUEST_URI'];
   header("Refresh: 180; URL=$url");
   fclose($doc);
-  }
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,14 +56,14 @@ $doc = fopen("Coordenadas.txt","r") or die ("Error al leer el archivo");
           zoom: 15
         });
               
-              setInterval(function(){
+              
         var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
         });           
       
         recorrido.setMap(map);
-      }, 2000);
+  
      
       }
 
